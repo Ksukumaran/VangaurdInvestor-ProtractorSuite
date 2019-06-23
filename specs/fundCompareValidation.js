@@ -16,10 +16,12 @@ describe('fundCompareValidations', () => {
     })
 
     it('go to funds compare page and compare products', () => {
-        smsfIndHomePage.fundCompareBtn.click();
+        smsfIndHomePage.fundCompareBtn.click().then(()=>{
+            browser.sleep(2000);
+        })
         browser.getAllWindowHandles().then((allWindows) => {
             browser.switchTo().window(allWindows[1]);
-            browser.wait(EC.visibilityOf(fundComparePg.infoIcon), 5000);
+            browser.wait(EC.visibilityOf(fundComparePg.addFundBtn), 5000);
             fundComparePg.fundIdentifierInputOne.sendKeys('VAF');
             browser.wait(EC.visibilityOf(fundComparePg.searchEntity), 5000);
             fundComparePg.searchEntity.click();

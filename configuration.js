@@ -11,7 +11,7 @@ exports.config = {
               savePath: 'target/screenshots'
             })
           );
-        }
+        },
     
     // Can be used if execution should be in Firefox
     // capabilities: {

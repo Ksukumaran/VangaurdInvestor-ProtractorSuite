@@ -7,6 +7,7 @@ function fundComparePage() {
         this.fundIdentifierInputFour = element(by.id('fundInput3'));
         this.searchEntity = element(by.id('searchLink'));
         this.replaceBtn = element(by.id('replaceButton0'));
+        this.addFundBtn = element(by.id('addButton0'));
 }
 
 module.exports = new fundComparePage();
